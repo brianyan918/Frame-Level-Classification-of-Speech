@@ -44,21 +44,37 @@ Thus, for a T-second recording, the entire spectrogram is a 100*T x 40 matrix, c
 The Deep NN used in this implementation is as follows:
 
   (0): Linear(in_features=760, out_features=1520, bias=True)
+  
   (1): BatchNorm1d(1520, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  
   (2): ReLU()
+  
   (3): Dropout(p=0.1, inplace=False)
+  
   (4): Linear(in_features=1520, out_features=760, bias=True)
+  
   (5): BatchNorm1d(760, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  
   (6): ReLU()
+  
   (7): Dropout(p=0.1, inplace=False)
+  
   (8): Linear(in_features=760, out_features=760, bias=True)
+  
   (9): BatchNorm1d(760, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  
   (10): ReLU()
+  
   (11): Dropout(p=0.1, inplace=False)
+  
   (12): Linear(in_features=760, out_features=380, bias=True)
+  
   (13): BatchNorm1d(380, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  
   (14): ReLU()
+  
   (15): Dropout(p=0.1, inplace=False)
+  
   (16): Linear(in_features=380, out_features=138, bias=True)
   
 **Results**
